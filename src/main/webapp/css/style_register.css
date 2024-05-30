@@ -1,0 +1,290 @@
+@charset "ISO-8859-1";
+
+/**Fuente a usar**/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --principal: #8DDCA4;
+    --principal_oscuro: #3E6259;
+
+    --secundario: #E7A977;
+    --secundario_oscuro: #8E623E;
+
+    --blanco: #ffff;
+    --negro: #000000;
+
+    --fuente_principal: "Open Sans";
+}
+
+/**Valores default**/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: var(--fuente_principal);
+}
+
+/*Cambia la forma de calcular el tamaño de un elemento*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container{
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 1.3rem 4rem;
+    background: var(--principal_oscuro);
+    color: var(--blanco);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 0.2rem solid transparent;
+    border-radius: 0.5rem;
+    transition: all .50s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: translateX(0.2rem);
+    border: 0.2rem solid var(--principal);
+    background: transparent;
+}
+
+.titulos_seccion{
+    display: grid;
+    place-items: center;
+    font-size: 5rem;
+    color: var(--principal_oscuro);
+    font-weight: 700;
+}
+
+/*Formulario*/
+.formulario-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    position: relative;
+    width: 60rem;
+    border: 0.2rem solid rgba(0, 0, 0, 0.3);
+    border-radius: 2rem;
+    backdrop-filter: blur(1.5rem);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.contenedor h2 {
+    font-size: 3rem;
+    color: var(--principal_oscuro);
+    text-align: center;
+}
+
+.input-contenedor {
+    position: relative;
+    margin: 3rem 0;
+    width: 100%;
+    border-bottom: 0.2rem solid var(--principal_oscuro);
+    max-width: 40rem;
+}
+
+.input-contenedor label {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    color: var(--principal_oscuro);
+    font-size: 2rem;
+    pointer-events: none;
+    transition: 0.6s;
+    width: 100%;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+    top: -0.5rem;
+    font-size: 1.5rem; /* Puedes ajustar el tamaño para que se vea mejor cuando la etiqueta esté arriba */
+}
+
+.input-contenedor input {
+    width: 100%;
+    height: 5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem; 
+    color: var(--principal_oscuro);
+}
+
+.input-contenedor i {
+    position: absolute;
+    color: var(--principal_oscuro);
+    font-size: 1.6rem;
+    top: 1.9rem;
+    right: 0.8rem;
+}
+
+.olvidar {
+    margin: -1.5rem 0 1.5rem;
+    font-size: 1.5rem;
+    color: var(--principal_oscuro);
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    align-items: center;
+    width: 100%;
+}
+
+.olvidar label {
+    display: flex;
+    align-items: center;
+}
+
+.olvidar label input {
+    margin-right: 0.5rem; /* Espacio entre el checkbox y el texto "Recordar" */
+}
+
+.olvidar a {
+    color: var(--principal_oscuro);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.5rem;
+}
+
+.olvidar a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    width: 100%;
+    height: 4.5rem;
+    border-radius: 4rem;
+    background: var(--principal);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--principal_oscuro);
+    outline: none;
+    font-size: 1.5rem;
+    transition: 0.4s;
+    margin-top: 2rem; /* Espacio adicional entre los botones */
+}
+
+.button:hover {
+    background: var(--principal_oscuro);
+    color: var(--blanco);
+}
+
+.button.reset {
+    background: var(--principal_oscuro);
+    color: var(--blanco);
+    margin-top: 1rem; /* Espacio adicional entre los botones */
+}
+
+.registrar {
+    font-size: 1.4rem;
+    color: var(--principal_oscuro);
+    text-align: center;
+    margin: 2rem 0 1rem;
+}
+
+.registrar p a {
+    text-decoration: none;
+    color: var(--principal_oscuro);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.registrar p a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/*Footer*/
+.footer{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url(Footer.jpg);
+        padding: 10rem 0;
+        width: 100%;
+}
+
+.footer .grupo-1{
+    width: 100%;
+    max-width: 130rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+    padding: 4.5rem 0;
+}
+
+.footer .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .grupo-1 .box figure img{
+    width: 25rem;
+}
+
+.footer .grupo-1 .box h2{
+    color: var(--blanco);
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+}
+
+.logo_footer{
+    font-size: 3.3rem;
+    color: var(--principal);
+    font-weight: 700;
+}
+
+.footer .grupo-1 .box p{
+    color: var(--blanco);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer .grupo-1 .red-social a{
+    display: inline-block;
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    margin-right: 2rem;
+}
+
+.footer .grupo-2{
+    padding: 1rem 1rem;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.footer .grupo-2 small{
+    font-size: 2rem;
+}

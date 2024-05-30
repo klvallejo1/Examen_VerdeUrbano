@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+/**Fuente a usar**/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --principal: #8DDCA4;
+    --principal_oscuro: #3E6259;
+
+    --secundario: #E7A977;
+    --secundario_oscuro: #8E623E;
+
+    --blanco: #ffff;
+    --negro: #000000;
+
+    --fuente_principal: "Open Sans";
+}
+
+/**Valores default**/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: var(--fuente_principal);
+}
+
+/*Cambia la forma de calcular el tamaño de un elemento*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container{
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+body{
+    
+}
+
+/*Header*/
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background: transparent;
+    padding: 2.7rem 17%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+}
+
+.logo{
+    font-size: 3.3rem;
+    color: var(--principal);
+    font-weight: 700;
+}
+
+span{
+    color: var(--blanco);
+}
+
+header.sticky{
+    padding: 0.8rem 17%;
+    background: transparent;
+    backdrop-filter: blur(3.5rem);
+}
+
+/*Barra de navegacion*/
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    color: var(--principal);
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1.5rem 2.2rem;
+    transition: all .50s ease;
+}
+
+.navbar a:hover{
+    color: var(--blanco);
+}
+
+.h-right{
+    display: flex;
+    align-items: center;
+}
+
+.h-right a:first-child{
+    color: var(--principal);
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+
+.h-right a{
+    vertical-align: middle;
+    font-size: 2rem;
+    color: var(--principal);
+    margin-right: 1.8rem;
+    margin-left: 0.5rem;
+    transition: all .50s ease;
+}
+
+.h-right a:hover{
+    color: var(--blanco);
+    transform: translateY(-0.3rem);
+}
+
+#menu-icon{
+    color: var(--principal);
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+section{
+    padding: 7rem 17% 6rem;
+}
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(Login.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.home-text h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    color: var(--blanco);
+
+}
+
+.home-text h1{
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--blanco);
+}
+
+.home-text p{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+    margin-bottom: 3.5rem;
+    color: var(--blanco);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1.3rem 4rem;
+    background: var(--principal_oscuro);
+    color: var(--blanco);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 0.2rem solid transparent;
+    border-radius: 0.5rem;
+    transition: all .50s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: translateX(0.2rem);
+    border: 0.2rem solid var(--principal);
+    background: transparent;
+}
+
+.titulos_seccion{
+    display: grid;
+    place-items: center;
+    font-size: 5rem;
+    color: var(--principal_oscuro);
+    font-weight: 700;
+}
